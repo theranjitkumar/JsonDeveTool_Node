@@ -1,0 +1,115 @@
+<div class="container py-5">
+    <h1 class="mb-4 text-center">📘 JSON Dev Tool API Documentation</h1>
+    <p class="lead text-center mb-5">A collection of dummy JSON APIs for Users, Blogs, and Comments.</p>
+
+    <h2 class="mb-4">👤 User API</h2>
+
+    <div class="endpoint-box">
+        <div class="endpoint-title">
+            <span class="endpoint-method">GET</span> /api/users
+        </div>
+        <p>Get a list of all users.</p>
+    </div>
+
+    <div class="endpoint-box">
+        <div class="endpoint-title">
+            <span class="endpoint-method">GET</span> /api/users/:id
+        </div>
+        <p>Get details of a specific user by ID.</p>
+    </div>
+
+    <div class="endpoint-box">
+        <div class="endpoint-title">
+            <span class="endpoint-method">POST</span> /api/users
+        </div>
+        <p>Create a new user. Include <code>name</code> and <code>email</code> in the body.</p>
+    </div>
+
+    <div class="endpoint-box">
+        <div class="endpoint-title">
+            <span class="endpoint-method">PUT</span> /api/users/:id
+        </div>
+        <p>Update an existing user's name or email.</p>
+    </div>
+
+    <div class="endpoint-box">
+        <div class="endpoint-title">
+            <span class="endpoint-method">DELETE</span> /api/users/:id
+        </div>
+        <p>Delete a user by ID.</p>
+    </div>
+
+    <h2 class="mt-5 mb-4">📝 Blog API</h2>
+
+    <div class="endpoint-box">
+        <div class="endpoint-title">
+            <span class="endpoint-method">GET</span> /api/blogs
+        </div>
+        <p>Retrieve a list of all blog posts.</p>
+    </div>
+
+    <div class="endpoint-box">
+        <div class="endpoint-title">
+            <span class="endpoint-method">GET</span> /api/blogs/:id
+        </div>
+        <p>Get a blog post by its ID.</p>
+    </div>
+
+    <div class="endpoint-box">
+        <div class="endpoint-title">
+            <span class="endpoint-method">POST</span> /api/blogs
+        </div>
+        <p>Create a new blog post using a title, content, and userId.</p>
+    </div>
+
+    <div class="endpoint-box">
+        <div class="endpoint-title">
+            <span class="endpoint-method">PUT</span> /api/blogs/:id
+        </div>
+        <p>Edit a blog post by ID.</p>
+    </div>
+
+    <div class="endpoint-box">
+        <div class="endpoint-title">
+            <span class="endpoint-method">DELETE</span> /api/blogs/:id
+        </div>
+        <p>Delete a blog post using its ID.</p>
+    </div>
+
+    <h2 class="mt-5 mb-4">💬 Comment API</h2>
+
+    <div class="endpoint-box">
+        <div class="endpoint-title">
+            <span class="endpoint-method">GET</span> /api/comments
+        </div>
+        <p>Fetch all comments across blog posts.</p>
+    </div>
+
+    <div class="endpoint-box">
+        <div class="endpoint-title">
+            <span class="endpoint-method">GET</span> /api/comments/:id
+        </div>
+        <p>Get a specific comment using its ID.</p>
+    </div>
+
+    <div class="endpoint-box">
+        <div class="endpoint-title">
+            <span class="endpoint-method">POST</span> /api/comments
+        </div>
+        <p>Add a new comment using content, blogId, and userId.</p>
+    </div>
+
+    <div class="endpoint-box">
+        <div class="endpoint-title">
+            <span class="endpoint-method">PUT</span> /api/comments/:id
+        </div>
+        <p>Update a comment's content using its ID.</p>
+    </div>
+
+    <div class="endpoint-box">
+        <div class="endpoint-title">
+            <span class="endpoint-method">DELETE</span> /api/comments/:id
+        </div>
+        <p>Remove a comment using its ID.</p>
+    </div>
+</div>

@@ -1,0 +1,164 @@
+<section class="container my-4">
+    <div class="row g-3">
+        <div class="col-sm-12">
+            <div class="py-4 h-100">
+                <h2>Dummy Api's</h2>
+                <p>Dummy APIs are simulated APIs that mimic the behavior of real APIs. They are useful for testing and
+                    development purposes when the actual API is not available.</p>
+                <h5>Http Request Example:</h5>
+
+                <div class="p-1 border rounded">
+                    <div class="bg-dark border rounded p-3">
+                        <code>
+                            fetch({{apiService.baseUrl}}/api/users/1)<br>
+                            .then(res => res.json()) <br>
+                            .then(console.log);
+                        </code>
+                        <div class="text-end mt-2">
+                            <button class="btn btn-primary" (click)="onHttpRquest($event)">HttpRequest</button>
+                        </div>
+                    </div>
+                    <div>
+                        @if(fetched){
+                        <app-json-viewer [data]="exampleJson"></app-json-viewer>
+                        }
+                    </div>
+                </div>
+
+                <section class="mt-3">
+                    <h5>API Endpoints:</h5>
+                    <p>Below are the API endpoints that you can use to interact with the dummy APIs. These endpoints are
+                        designed to simulate real-world API interactions.</p>
+                    <ul class="list-group my-3">
+                        <li class="list-group-item active">
+                            Api BaseUrl:
+                            <a href="javascript:void(0)" class="text-decoration-none text-white">
+                                {{apiService.baseUrl}}/api
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="users">
+                    <ul class="list-group my-3">
+                        <li class="list-group-item active">
+                            <a href="javascript:void(0)" class="text-decoration-none text-white">
+                                <span> User API Endpoints: </span>
+                                <span> /users </span>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/api/users" class="text-decoration-none" target="_blank"
+                                (click)="onApiClick('users')">
+                                GET /api/users - Returns a list of users
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/api/users/1" class="text-decoration-none" target="_blank"
+                                (click)="onApiClick('users/1')">
+                                GET /api/users/{{ '{' }}id{{ '}' }} - Returns details of a user
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:void(0)" class="text-decoration-none text-muted"
+                                style="pointer-events: none;">
+                                PUT /api/users/{{ '{' }}id{{ '}' }} - Updates a user
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:void(0)" class="text-decoration-none text-muted"
+                                style="pointer-events: none;">
+                                PATCH /api/users/{{ '{' }}id{{ '}' }} - Partial Updates a user
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:void(0)" class="text-decoration-none text-muted"
+                                style="pointer-events: none;">
+                                DELETE /api/users/{{ '{' }}id{{ '}' }} - Deletes a user
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="blogs">
+                    <ul class="list-group my-3">
+                        <li class="list-group-item active">
+                            <a href="javascript:void(0)" class="text-decoration-none text-white">
+                                <span> Blogs API Endpoints: </span>
+                                <span> /blogs </span>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/api/blogs" class="text-decoration-none" target="_blank"
+                                (click)="onApiClick('blogs')">
+                                GET /api/blogs - Returns a list of blogs
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/api/blogs/101" class="text-decoration-none" target="_blank"
+                                (click)="onApiClick('blogs/101')">
+                                GET /api/blogs/{{ '{' }}id{{ '}' }} - Returns details of a blog
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:void(0)" class="text-decoration-none text-muted"
+                                style="pointer-events: none;">
+                                PUT /api/blogs/{{ '{' }}id{{ '}' }} - Updates a blog
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:void(0)" class="text-decoration-none text-muted"
+                                style="pointer-events: none;">
+                                PATCH /api/blogs/{{ '{' }}id{{ '}' }} - Partial Updates a blog
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:void(0)" class="text-decoration-none text-muted"
+                                style="pointer-events: none;">
+                                DELETE /api/blogs/{{ '{' }}id{{ '}' }} - Deletes a blog
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="comments">
+                    <ul class="list-group my-3">
+                        <li class="list-group-item active">
+                            <a href="javascript:void(0)" class="text-decoration-none text-white">
+                                <span> Comments API Endpoints: </span>
+                                <span> /comments </span>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/api/comments" class="text-decoration-none" target="_blank"
+                                (click)="onApiClick('comments')">
+                                GET /api/comments - Returns a list of comments
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/api/comments/1001" class="text-decoration-none" target="_blank"
+                                (click)="onApiClick('comments/1001')">
+                                GET /api/comments/{{ '{' }}id{{ '}' }} - Returns details of a comment
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:void(0)" class="text-decoration-none text-muted"
+                                style="pointer-events: none;">
+                                PUT /api/comments/{{ '{' }}id{{ '}' }} - Updates a comment
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:void(0)" class="text-decoration-none text-muted"
+                                style="pointer-events: none;">
+                                PATCH /api/comments/{{ '{' }}id{{ '}' }} - Partial Updates a comment
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:void(0)" class="text-decoration-none text-muted"
+                                style="pointer-events: none;">
+                                DELETE /api/comments/{{ '{' }}id{{ '}' }} - Deletes a comment
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>

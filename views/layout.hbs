@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}} - JSON Dev Tool</title>
+  <meta name="description" content="{{description}}">
+  <meta name="keywords" content="{{keywords}}">
+
+  <!-- ==== Open Graph tags === -->
+  <meta property="og:type" content="{{metaOgType}}" />
+  <meta property="og:title" content="{{metaOgTitle}} - JSON Dev Tool" />
+  <meta property="og:description" content="{{metaOgDescription}}" />
+  <meta property="og:image" content="{{metaOgImage}}" />
+  <!-- === Open Graph tags end === -->
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="img/brand/favicon.ico">
+  <link rel="apple-touch-icon" href="img/brand/apple-touch-icon.png">
+
+  <!-- Libs -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel='stylesheet' href='/css/style.css'>
+</head>
+
+<body class="d-flex flex-column h-100">
+  <header>
+    <nav class="navbar navbar-primary bg-primary">
+      <div class="container">
+        <!-- Offcanvas Trigger (hamburger icon) -->
+        <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand ms-2 text-white" href="/">{{'{'}}JSON{{'}'}} DEV TOOL</a>
+
+        <!-- Normal links for large screens -->
+        <ul class="navbar-nav d-none d-lg-flex flex-row">
+          <li class="nav-item mx-2"><a class="nav-link text-white" href="/jsonviewer">Json Viewer</a></li>
+          <li class="nav-item mx-2"><a class="nav-link text-white" href="/dummyapis">Dummy API's</a></li>
+          <li class="nav-item mx-2"><a class="nav-link text-white" href="/apidocs">API Docs</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">JSON DEV TOOL</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/jsonviewer">Json Viewer</a></li>
+          <li class="nav-item"><a class="nav-link" href="/dummyapis">Dummy API's</a></li>
+          <li class="nav-item"><a class="nav-link" href="/apidocs">API Docs</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  {{{body}}}
+
+  <footer class="bg-primary text-center text-white py-1">
+    <p class="mb-0">© 2025 {{'{'}}Json{{'}'}} Dev Tool Built for developers.</p>
+  </footer>
+
+</body>
+
+</html>

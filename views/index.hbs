@@ -1,0 +1,133 @@
+<!-- Hero Section -->
+<section class="bg-light text-center py-5">
+    <div class="container">
+        <h1 class="display-5 fw-bold">Powerful JSON Tools for Developers</h1>
+        <p class="lead">Format, validate, and view JSON instantly. Generate dummy APIs for frontend devs.</p>
+        <div class="mt-4 d-flex flex-column flex-sm-row justify-content-center align-items-center gap-2">
+            <a href="/jsonviewer" class="btn btn-primary">Try JSON Viewer</a>
+            <a href="/dummyapis" class="btn btn-outline-secondary">Use Dummy API</a>
+        </div>
+    </div>
+</section>
+
+<!-- Feature Cards -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-12 col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">🧾 JSON Viewer / Formatter</h5>
+                        <p class="card-text">Paste your JSON and get it beautified instantly. Validate structure and
+                            view in tree format.</p>
+                        <a href="/jsonviewer" class="btn btn-sm btn-primary">Open Viewer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">🔌 Dummy API's </h5>
+                        <p class="card-text">Test your frontend with realistic API responses for users, blogs, and
+                            comments.</p>
+                        <a href="/dummyapis" class="btn btn-sm btn-secondary">View API's</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Info Sections -->
+<section class="container mb-5">
+    <div class="row g-3">
+        <section class="col-12 col-lg-6" id="what-is-json">
+            <div class="p-4 bg-light border rounded h-100">
+                <h2 class="mb-3">What is JSON?</h2>
+                <div class="lead">
+                    <p>
+                        JSON (JavaScript Object Notation) is a lightweight data-interchange format that
+                        is easy for humans to read and write, and easy for machines to parse and
+                        generate.
+                    </p>
+                    <p>
+                        It represents structured data using key-value pairs, arrays, and nested objects.
+                        JSON is widely used in web development to exchange data between a client and a
+                        server.
+                    </p>
+                    <p>
+                        Despite its name, JSON is language-independent and supported by nearly all
+                        modern programming languages including JavaScript, Python, PHP, Java, and more.
+                    </p>
+                </div>
+                <h5>Example:</h5>
+                <app-json-viewer [data]="exampleJson"></app-json-viewer>
+            </div>
+        </section>
+        <section class="col-12 col-lg-6" id="why-json">
+            <section class="p-4 bg-light border rounded h-100">
+                <div class="container-fluid px-0">
+                    <h2 class="mb-3">Why JSON?</h2>
+                    <p class="lead mb-4">
+                        JSON (JavaScript Object Notation) is the universal format for structured data exchange on
+                        the web. Here's why developers and systems around the world rely on it:
+                    </p>
+                    <div class="row gy-4">
+                        <div class="col-12 col-md-6">
+                            <div class="p-4 border rounded bg-white shadow-sm h-100">
+                                <h5>🌐 Human-Readable and Developer-Friendly</h5>
+                                <p>JSON uses a simple structure of key-value pairs, making it easy to read, write,
+                                    debug, and maintain.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="p-4 border rounded bg-white shadow-sm h-100">
+                                <h5>⚡ Fast and Efficient</h5>
+                                <p>With less overhead than formats like XML, JSON can be parsed and generated
+                                    faster, using fewer resources — ideal for modern apps.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="p-4 border rounded bg-white shadow-sm h-100">
+                                <h5>🔗 Backbone of REST APIs</h5>
+                                <p>JSON is the standard for RESTful APIs. It enables seamless data transmission
+                                    between client apps, servers, microservices, and more.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="p-4 border rounded bg-white shadow-sm h-100">
+                                <h5>🔄 Language-Agnostic</h5>
+                                <p>Supported by virtually all programming languages, JSON allows data exchange
+                                    between diverse systems and platforms.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="p-4 border rounded bg-white shadow-sm h-100">
+                                <h5>💾 Lightweight and Compact</h5>
+                                <p>With minimal syntax and no extra markup, JSON reduces payload size — improving
+                                    web and mobile app performance.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="p-4 border rounded bg-white shadow-sm h-100">
+                                <h5>🧩 Perfect for Modern App Architectures</h5>
+                                <p>JSON is a native fit for NoSQL databases, frontend frameworks (like React,
+                                    Angular), and cloud-native tools (like Docker, Kubernetes).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-4 bg-dark text-white rounded shadow">
+                        <h4 class="mb-3">Why Use Our JSON Dev Tool?</h4>
+                        <ul class="mb-0">
+                            <li>✅ Format & Beautify Raw JSON</li>
+                            <li>✅ Validate JSON Structures Instantly</li>
+                            <li>✅ Use Dummy APIs for Testing</li>
+                            <li>✅ Visualize JSON in Tree or Table View</li>
+                            <li>✅ Import, Export & Convert JSON Easily</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+</section>

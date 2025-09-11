@@ -1,46 +1,39 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.10.2/jsoneditor.min.css">
+<!doctype html>
+<html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}} - JSON Dev Tool</title>
+    <meta name="description" content="{{description}}">
+    <meta name="keywords" content="{{keywords}}">
 
-<div class="container-fluid p-0" style="height: 100vh;">
-    <div id="jsoneditor" style="width: 100%; height: 100%;"></div>
-</div>
+    <!-- ==== Open Graph tags === -->
+    <meta property="og:type" content="{{metaOgType}}" />
+    <meta property="og:title" content="{{metaOgTitle}} - JSON Dev Tool" />
+    <meta property="og:description" content="{{metaOgDescription}}" />
+    <meta property="og:image" content="{{metaOgImage}}" />
+    <!-- === Open Graph tags end === -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.10.2/jsoneditor.min.js"></script>
-<script>
-    // Initialize JSON Editor
-    const container = document.getElementById('jsoneditor');
-    const options = {
-        mode: 'code',
-        modes: ['tree', 'view', 'form', 'code', 'text', 'preview'],
-        mainMenuBar: true,
-        onError: function (err) {
-            showError(err.toString());
-        },
-        onChange: function () {
-            try {
-                const json = editor.get();
-                document.getElementById('jsonInput').value = JSON.stringify(json, null, 2);
-                hideError();
-            } catch (e) {
-                showError(e);
-            }
-        }
-    };
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/img/logo/favicon.ico">
+    <link rel="apple-touch-icon" href="/img/logo/apple-touch-icon.png">
 
-    let editor = new JSONEditor(container, options);
+    <!-- Libs -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    {{!--
+    <link rel="stylesheet" href="/css/jsoneditor.min.css"> --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/10.4.1/jsoneditor.css">
+    <link rel='stylesheet' href='/css/style.css'>
 
-    // Set default JSON
-    const defaultJson = {
-        "name": "JSON Viewer",
-        "description": "A simple JSON viewer and formatter",
-        "version": "1.0.0",
-        "features": ["Format", "Validate", "Tree View", "Minify"],
-        "author": ""
-    };
+    <script src="/js/jsoneditor.min.js"></script>
+</head>
 
-    editor.set(defaultJson);
+<body class="d-flex flex-column h-100">
+    <div id="jsoneditor" data-json='{{{ json }}}'></div>
+    <div id="error" class="error"></div>
 
+    <script src="/js/script.js"></script>
+</body>
 
-</script>
+</html>

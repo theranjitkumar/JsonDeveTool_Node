@@ -1,0 +1,179 @@
+{{!< layout}}<!-- Hero Section -->
+    <section class="blog-hero bg-hero hero text-white">
+        <div class="container py-4">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-12">
+                    <h1 class="display-4 fw-bold mb-3">{{article.title}}</h1>
+                    {{!-- <p class="lead mb-4">{{article.intro}}</p> --}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Header -->
+    <article class="blog-article py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                    <!-- Back to Blog -->
+                    <div class="mb-4">
+                        <a href="/blogs" class="text-decoration-none d-inline-flex align-items-center">
+                            <i class="bi bi-arrow-left me-2"></i> Back to Blog
+                        </a>
+                    </div>
+
+                    <!-- Article Header -->
+                    <header class="mb-5">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-primary-soft text-primary me-3">{{article.category}}</span>
+                            <span class="text-muted">{{article.date}} </span>
+                        </div>
+                        <h1 class="display-4 fw-bold mb-3">{{article.title}}</h1>
+                        <div class="d-flex align-items-center">
+                            <img src="{{article.authorImage}}" class="rounded-circle me-3" width="56" height="56"
+                                alt="{{article.author}}">
+                            <div>
+                                <h6 class="mb-0">{{article.author}}</h6>
+                                <small class="text-muted">{{article.authorTitle}}</small>
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Featured Image -->
+                    <figure class="mb-5">
+                        <img src="{{article.featuredImage}}" class="img-fluid rounded-3 shadow-sm w-100"
+                            alt="{{article.title}}">
+                        <figcaption class="text-center text-muted mt-2">{{article.imageCaption}}</figcaption>
+                    </figure>
+
+                    <!-- Article Content -->
+                    <div class="article-content mt-4">
+                        {{{article.content}}}
+                    </div>
+
+                    <!-- Article Footer -->
+                    <footer class="mt-5 pt-4 border-top">
+                        {{#if article.tags}}
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            {{#each article.tags}}
+                            <span class="badge bg-light text-dark">{{this}}</span>
+                            {{/each}}
+                        </div>
+                        {{/if}}
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex">
+                                <button class="btn btn-outline-secondary btn-sm me-2">
+                                    <i class="bi bi-heart me-1"></i> Like
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm me-2">
+                                    <i class="bi bi-bookmark me-1"></i> Save
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm">
+                                    <i class="bi bi-share me-1"></i> Share
+                                </button>
+                            </div>
+                            <div class="text-muted">
+                                <i class="bi bi-eye me-1"></i> {{article.views}} views
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- About Author -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="row align-items-center">
+                                <div class="col-md-3 text-center mb-3 mb-md-0">
+                                    <img src="{{article.authorImage}}" class="rounded-circle img-thumbnail" width="120"
+                                        height="120" alt="{{article.author}}">
+                                </div>
+                                <div class="col-md-9">
+                                    <h5 class="mb-1">About {{article.author}}</h5>
+                                    <p class="text-muted mb-2">{{article.authorBio}}</p>
+                                    <div class="d-flex gap-2">
+                                        <a href="#" class="text-dark"><i class="bi bi-twitter fs-5"></i></a>
+                                        <a href="#" class="text-dark"><i class="bi bi-linkedin fs-5"></i></a>
+                                        <a href="#" class="text-dark"><i class="bi bi-github fs-5"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">You May Also Like</h2>
+                <p class="text-muted">Explore more articles on similar topics</p>
+            </div>
+
+            <div class="row g-4">
+                {{#each relatedArticles}}
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow">
+                        {{#if featuredImage}}
+                        <img src="{{featuredImage}}" class="card-img-top" alt="{{title}}">
+                        {{/if}}
+                        <div class="card-body">
+                            {{#if category}}
+                            <div class="d-flex mb-3">
+                                <span class="badge bg-primary-soft text-primary me-2">{{category}}</span>
+                            </div>
+                            {{/if}}
+                            <h5 class="card-title fw-bold">{{title}}</h5>
+                            {{#if articleIntro}}
+                            <p class="card-text text-muted">{{articleIntro}}</p>
+                            {{/if}}
+                            <div class="d-flex align-items-center mt-3">
+                                {{#if authorImage}}
+                                <img src="{{authorImage}}" class="rounded-circle me-2" width="32" height="32"
+                                    alt="{{author}}">
+                                {{/if}}
+                                <small class="text-muted">
+                                    {{#if author}}{{author}} · {{/if}}
+                                    {{#if date}}{{date}} · {{/if}}
+                                    {{#if views}}{{views}} views{{/if}}
+                                </small>
+                            </div>
+                        </div>
+                        <a href="/blogs/{{slug}}" class="stretched-link"></a>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="fw-bold mb-3">Never Miss an Update</h2>
+                    <p class="mb-4">Subscribe to our newsletter for the latest tutorials, articles, and course updates.
+                    </p>
+                    <form class="row g-2 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
+                        </div>
+                        <div class="col-md-auto">
+                            <button type="submit" class="btn btn-light btn-lg w-100">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>

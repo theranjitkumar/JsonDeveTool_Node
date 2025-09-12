@@ -91,3 +91,7 @@ pre {
     --bs-bg-opacity: 1;
     background-color: #fd0d0d45 !important;
 }
+
+.bg-hero {
+    background-color: #293c8b !important;
+}

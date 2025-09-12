@@ -1,0 +1,87 @@
+{{!< layout}} <!-- Hero Section -->
+    <section class="blog-hero bg-hero hero text-white">
+        <div class="container py-4">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">Blogs</h1>
+                    <p class="lead mb-4">Insights, tutorials, and updates on the latest in technology and education</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{#if featuredArticle}}
+    <!-- Featured Post -->
+    <section class="pt-4">
+        <div class="container">
+            <div class="card border-0 shadow overflow-hidden mb-5">
+                <div class="row g-0">
+                    <div class="col-lg-6">
+                        <img src="{{featuredArticle.featuredImage}}" class="img-fluid h-100"
+                            alt="{{featuredArticle.title}}" style="object-fit: cover;">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="badge bg-primary-soft text-primary rounded-pill px-3 mb-3">Featured</div>
+                            <h2 class="card-title display-6 fw-bold mb-3">{{featuredArticle.title}}</h2>
+                            <p class="card-text text-muted mb-4">{{featuredArticle.articleIntro}}</p>
+                            <div class="d-flex align-items-center">
+                                <img src="{{featuredArticle.authorImage}}" class="rounded-circle me-2" width="40"
+                                    height="40" alt="{{featuredArticle.author}}">
+                                <div class="ms-2">
+                                    <h6 class="mb-0">{{featuredArticle.author}}</h6>
+                                    <small class="text-muted">{{featuredArticle.date}} · {{featuredArticle.readTime}}
+                                        min read</small>
+                                </div>
+                            </div>
+                            <a href="/blogs/{{featuredArticle.slug}}" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{/if}}
+
+    <!-- Blog Posts Grid -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="fw-bold mb-3">Latest Articles</h2>
+                    <p class="text-muted">Stay updated with our latest tutorials, industry insights, and success stories
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                {{#each articles}}
+                <div class="col-md-6 col-lg-4">
+                    <a href="/blogs/{{slug}}" class="text-decoration-none text-dark">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow">
+                            <img src="{{featuredImage}}" class="card-img-top" alt="{{title}}">
+                            <div class="card-body">
+                                <div class="d-flex mb-3">
+                                    <span class="badge bg-primary-soft text-primary me-2">{{category}}</span>
+                                    <small class="text-muted">{{readTime}} min read</small>
+                                </div>
+                                <h5 class="card-title fw-bold">{{title}}</h5>
+                                <p class="card-text text-muted">{{{articleIntro}}}</p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <img src="{{authorImage}}" class="rounded-circle me-2" width="32" height="32"
+                                        alt="{{author}}">
+                                    <small class="text-muted">{{author}} · {{date}} · {{views}} views</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {{/each}}
+            </div>
+
+            <!-- More Posts Button -->
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-outline-primary px-4">Load More Articles</a>
+            </div>
+        </div>
+    </section>

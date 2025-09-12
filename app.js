@@ -4,8 +4,11 @@ const hbs = require('hbs');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const testimonials = require('./data/testimonials');
 
 var routers = require('./app.routes');
+var blogRouter = require('./routes/blog.route');
+var sitemapRouter = require('./routes/sitemap');
 
 var app = express();
 
@@ -20,8 +23,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routers);
+app.use((req, res, next) => {
+  res.locals.testimonialsData = testimonials;
+  next();
+});
 
+app.use('/', routers);
+app.use('/blogs', blogRouter);
+app.use('/', sitemapRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));

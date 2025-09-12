@@ -10,7 +10,7 @@ const getSlugs = async () => {
     const blogEntries = Object.values(blogData);
     const blogSlugs = blogEntries.map(blog => ({
         type: 'blog',
-        slug: blog.id // Using 'id' as the slug since that's what's used in the URL
+        slug: blog.slug // Using 'slug' to match the blog data structure
     }));
 
     return blogSlugs;

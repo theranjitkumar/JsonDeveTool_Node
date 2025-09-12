@@ -486,7 +486,6 @@ module.exports = [
   </article>
     `
   },
-  ,
   {
     slug: 'how-to-convert-xml-to-json-step-by-step-guide',
     featured: false,

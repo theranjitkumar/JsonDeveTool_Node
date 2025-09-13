@@ -49,12 +49,12 @@ module.exports = [
 
     <p>Whether you're a front-end dev, QA tester, or tech writer, online tools save time and reduce friction.</p>
 
-    <h2>🔧 How to Format JSON Online with JSONDeveTool</h2>
+    <h2>🔧 How to Format JSON Online with JSONDevTool</h2>
 
-    <p>Using our free <a href="https://jsondevetool.com" target="_blank"><strong>JSON Viewer Tool</strong></a> is quick and effortless. Here’s how:</p>
+    <p>Using our free <a href="https://jsondevtool.com" target="_blank"><strong>JSON Viewer Tool</strong></a> is quick and effortless. Here’s how:</p>
 
     <h3>Step 1: Open the Tool</h3>
-    <p>Go to 👉 <a href="https://jsondevetool.com" target="_blank">https://jsondevetool.com</a></p>
+    <p>Go to 👉 <a href="https://jsondevtool.com" target="_blank">https://jsondevtool.com</a></p>
 
     <h3>Step 2: Paste Your JSON</h3>
     <p>Copy your raw or minified JSON and paste it into the text area.</p>
@@ -93,14 +93,14 @@ module.exports = [
     </ul>
 
     <h2>🔒 Is It Safe to Use Online JSON Viewers?</h2>
-    <p>Yes — as long as you’re not pasting <strong>sensitive data</strong>, online JSON viewers are completely safe to use. At <a href="https://jsondevetool.com" target="_blank"><strong>JSONDeveTool.com</strong></a>, your data is processed <strong>client-side</strong> — meaning <strong>nothing gets sent to our servers</strong>.</p>
+    <p>Yes — as long as you’re not pasting <strong>sensitive data</strong>, online JSON viewers are completely safe to use. At <a href="https://jsondevtool.com" target="_blank"><strong>JSONDevTool.com</strong></a>, your data is processed <strong>client-side</strong> — meaning <strong>nothing gets sent to our servers</strong>.</p>
 
     <p>Always double-check privacy policies when using any online tool.</p>
 
     <h2>📌 Final Thoughts</h2>
     <p>You don’t need a fancy IDE or backend setup just to read or format JSON.</p>
 
-    <p>With tools like <a href="https://jsondevetool.com" target="_blank"><strong>JSONDeveTool.com</strong></a>, you can:</p>
+    <p>With tools like <a href="https://jsondevtool.com" target="_blank"><strong>JSONDevTool.com</strong></a>, you can:</p>
     <ul>
       <li>✅ Quickly beautify and validate JSON</li>
       <li>✅ Explore nested structures visually</li>
@@ -109,10 +109,10 @@ module.exports = [
 
     <p><strong>Give it a try today and see how much easier your workflow becomes.</strong></p>
 
-    <p>👉 <a href="https://jsondevetool.com" target="_blank"><strong>Try it now: Free Online JSON Viewer</strong></a></p>
+    <p>👉 <a href="https://jsondevtool.com" target="_blank"><strong>Try it now: Free Online JSON Viewer</strong></a></p>
 
     <h2>💬 Have Feedback?</h2>
-    <p>Have a feature request or bug report? We’re always improving — <a href="https://jsondevetool.com#contact">contact us here</a> or leave a comment below.</p>
+    <p>Have a feature request or bug report? We’re always improving — <a href="https://jsondevtool.com#contact">contact us here</a> or leave a comment below.</p>
   </article>
     `
   },
@@ -140,7 +140,7 @@ module.exports = [
 
     <p>With so many options out there, it’s tough to know which tool is the best — especially when you're looking for something <strong>free, fast, and reliable</strong>.</p>
 
-    <p>In this article, we compare the <strong>top 5 free online JSON viewer tools</strong> — and show you why <a href="https://jsondevetool.com" target="_blank">JSONDeveTool</a> might be your best choice.</p>
+    <p>In this article, we compare the <strong>top 5 free online JSON viewer tools</strong> — and show you why <a href="https://jsondevtool.com" target="_blank">JSONDevTool</a> might be your best choice.</p>
 
     <h2>⚡ What Is an Online JSON Viewer?</h2>
     <p>An online JSON viewer is a browser-based tool that helps you:</p>
@@ -162,10 +162,10 @@ module.exports = [
       <li>🔐 Data Privacy</li>
     </ul>
 
-    <h3>1. 🥇 JSONDeveTool – <a href="https://jsondevetool.com" target="_blank">https://jsondevetool.com</a></h3>
+    <h3>1. 🥇 JSONDevTool – <a href="https://jsondevtool.com" target="_blank">https://jsondevtool.com</a></h3>
     <p><strong>⭐ Best Overall Free JSON Viewer (Developer-Friendly + Fast)</strong></p>
     <p><strong>Why it stands out:</strong><br />
-    JSONDeveTool is a clean, fast, and powerful tool that lets you format, view, and validate JSON effortlessly — all <strong>client-side</strong>, meaning your data stays secure.</p>
+    JSONDevTool is a clean, fast, and powerful tool that lets you format, view, and validate JSON effortlessly — all <strong>client-side</strong>, meaning your data stays secure.</p>
 
     <strong>Top Features:</strong>
     <ul>
@@ -189,7 +189,7 @@ module.exports = [
     </ul>
 
     <p><strong>Ideal for:</strong> Developers, testers, and anyone working with APIs or front-end apps.</p>
-    <p>👉 <a href="https://jsondevetool.com" target="_blank"><strong>Try it now: JSON Viewer on JSONDeveTool</strong></a></p>
+    <p>👉 <a href="https://jsondevtool.com" target="_blank"><strong>Try it now: JSON Viewer on JSONDevTool</strong></a></p>
 
     <hr />
 
@@ -293,7 +293,7 @@ module.exports = [
       </thead>
       <tbody>
         <tr>
-          <td><strong>JSONDeveTool</strong></td>
+          <td><strong>JSONDevTool</strong></td>
           <td>✅</td>
           <td>✅</td>
           <td>⚡⚡⚡⚡⚡</td>
@@ -335,10 +335,10 @@ module.exports = [
       </tbody>
     </table>
 
-    <p><strong>🏆 Winner:</strong> <a href="https://jsondevetool.com" target="_blank">JSONDeveTool</a> is the best all-round free JSON viewer.<br />
+    <p><strong>🏆 Winner:</strong> <a href="https://jsondevtool.com" target="_blank">JSONDevTool</a> is the best all-round free JSON viewer.<br />
     It’s fast, ad-free, secure, and designed for developers — without unnecessary bloat.</p>
 
-    <h2>✅ Why Developers Choose JSONDeveTool</h2>
+    <h2>✅ Why Developers Choose JSONDevTool</h2>
     <ul>
       <li>Built for modern developers</li>
       <li>Works in all browsers</li>
@@ -346,13 +346,13 @@ module.exports = [
       <li>New features added regularly</li>
     </ul>
 
-    <p>Whether you're debugging an API, formatting JSON for logs, or reviewing data in a team — JSONDeveTool gets the job done.</p>
+    <p>Whether you're debugging an API, formatting JSON for logs, or reviewing data in a team — JSONDevTool gets the job done.</p>
 
-    <h2>🔗 Try JSONDeveTool Today (Free)</h2>
-    <p>👉 <a href="https://jsondevetool.com" target="_blank"><strong>Open JSON Viewer</strong></a></p>
+    <h2>🔗 Try JSONDevTool Today (Free)</h2>
+    <p>👉 <a href="https://jsondevtool.com" target="_blank"><strong>Open JSON Viewer</strong></a></p>
 
     <h2>📢 Got Feedback or Suggestions?</h2>
-    <p>We’re always improving. If there’s a feature you’d love to see, <a href="https://jsondevetool.com#contact">contact us here</a> — or follow us for updates.</p>
+    <p>We’re always improving. If there’s a feature you’d love to see, <a href="https://jsondevtool.com#contact">contact us here</a> — or follow us for updates.</p>
   </article>
     `
   },
@@ -450,7 +450,7 @@ module.exports = [
 
     <p>If you want to do all of the above quickly in your browser — try our free tool:</p>
 
-    <p>👉 <a href="https://jsondevetool.com" target="_blank"><strong>Try JSON Viewer on JSONDeveTool.com</strong></a></p>
+    <p>👉 <a href="https://jsondevtool.com" target="_blank"><strong>Try JSON Viewer on JSONDevTool.com</strong></a></p>
 
     <h2>🧠 JSON vs JavaScript Objects</h2>
     <p>They look similar, but not identical.</p>
@@ -476,12 +476,12 @@ module.exports = [
 
     <p>And whenever you need to format, view, or validate JSON quickly — you can always use:</p>
 
-    <p>👉 <a href="https://jsondevetool.com" target="_blank"><strong>JSON Viewer by JSONDeveTool</strong></a></p>
+    <p>👉 <a href="https://jsondevtool.com" target="_blank"><strong>JSON Viewer by JSONDevTool</strong></a></p>
 
     <h2>📣 Stay Tuned</h2>
     <p>Follow our blog for more tips, tutorials, and free tools that simplify your web development workflow.</p>
 
-    <p>💬 Have suggestions? <a href="https://jsondevetool.com#contact">Contact us here</a>.</p>
+    <p>💬 Have suggestions? <a href="https://jsondevtool.com#contact">Contact us here</a>.</p>
 
   </article>
     `
@@ -547,13 +547,13 @@ module.exports = [
 
     <p><strong>Steps:</strong></p>
     <ol>
-      <li>Go to a free tool like <a href="https://jsondevetool.com" target="_blank">JSONDeveTool.com</a></li>
+      <li>Go to a free tool like <a href="https://jsondevtool.com" target="_blank">JSONDevTool.com</a></li>
       <li>Paste your XML code into the XML input area</li>
       <li>Click the “Convert to JSON” button</li>
       <li>Copy or download the formatted JSON result</li>
     </ol>
 
-    <p>👉 <a href="https://jsondevetool.com" target="_blank"><strong>Try it now: XML to JSON Converter</strong></a></p>
+    <p>👉 <a href="https://jsondevtool.com" target="_blank"><strong>Try it now: XML to JSON Converter</strong></a></p>
 
     <h3>Method 2: Convert XML to JSON Using JavaScript</h3>
     <p>If you’re working in a development environment, you can use JavaScript libraries to handle conversion.</p>
@@ -598,12 +598,12 @@ print(json_data)</code></pre>
     <p><strong>Converting XML to JSON</strong> is simple with the right tools, and it can save time, reduce bugs, and improve compatibility.</p>
 
     <p>Want to try it right now?</p>
-    <p>👉 <a href="https://jsondevetool.com" target="_blank"><strong>Use our free XML to JSON converter</strong></a></p>
+    <p>👉 <a href="https://jsondevtool.com" target="_blank"><strong>Use our free XML to JSON converter</strong></a></p>
 
     <h2>📣 More JSON Tips Coming Soon</h2>
     <p>Stay tuned to our blog for more tutorials on working with JSON, APIs, and web dev tools — made simple for everyone.</p>
 
-    <p>Have feedback? <a href="https://jsondevetool.com#contact">Let us know here</a>.</p>
+    <p>Have feedback? <a href="https://jsondevtool.com#contact">Let us know here</a>.</p>
   </article>
     `
   },

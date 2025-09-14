@@ -1,23 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/home', function (req, res, next) {
-    res.render('index', {
-        title: 'Home',
-        description: 'Free online JSON formatter and viewer. Use dummy APIs for testing your frontend apps. Fast, reliable developer tools at JSON Dev Tool.',
-        keywords: 'JSON, Dev Tool, Viewer, Manipulator, Formater',
-        author: 'Jsone Dev Tool',
-
-        metaOgType: 'website',
-        metaOgTitle: 'Jsone Dev Tool',
-        metaOgDescription: 'Free online JSON formatter and viewer. Use dummy APIs for testing your frontend apps. Fast, reliable developer tools at JSON Dev Tool.',
-        metaOgImage: '/img/jsondt.png',
-        metaOgUrl: 'https://jsondevtool.com',
-        metaTwitterCard: '/img/jsondt.png'
-    });
-});
-
+const { findAdBySlug } = require('./data/ads.js');
 
 router.get('/', function (req, res, next) {
     const jsonData = {
@@ -43,6 +27,23 @@ router.get('/', function (req, res, next) {
         metaOgUrl: 'https://jsondevtool.com',
         metaTwitterCard: '/img/jsondt.png',
         json: JSON.stringify(jsonData)
+    });
+});
+
+/* GET home page. */
+router.get('/home', function (req, res, next) {
+    res.render('index', {
+        title: 'Home',
+        description: 'Free online JSON formatter and viewer. Use dummy APIs for testing your frontend apps. Fast, reliable developer tools at JSON Dev Tool.',
+        keywords: 'JSON, Dev Tool, Viewer, Manipulator, Formater',
+        author: 'Jsone Dev Tool',
+
+        metaOgType: 'website',
+        metaOgTitle: 'Jsone Dev Tool',
+        metaOgDescription: 'Free online JSON formatter and viewer. Use dummy APIs for testing your frontend apps. Fast, reliable developer tools at JSON Dev Tool.',
+        metaOgImage: '/img/jsondt.png',
+        metaOgUrl: 'https://jsondevtool.com',
+        metaTwitterCard: '/img/jsondt.png'
     });
 });
 
@@ -77,6 +78,22 @@ router.get('/apidocs', function (req, res, next) {
         metaOgImage: '/img/jsondt.png',
         metaOgUrl: 'https://jsondevtool.com',
         metaTwitterCard: '/img/jsondt.png'
+    });
+});
+
+// ADS pages - moved to the end to avoid route conflicts
+router.get('/:slug', function (req, res, next) {
+    const slug = req.params.slug.toLowerCase();
+    const content = findAdBySlug(slug);
+
+    if (!content) {
+        return next(); // Let Express handle 404
+    }
+
+    res.render('ads', {
+        ...content,
+        metaOgUrl: `https://jsondevtool.com/${slug}`,
+        metaCanonical: `https://jsondevtool.com/${slug}`
     });
 });
 

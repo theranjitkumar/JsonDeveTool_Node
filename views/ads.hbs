@@ -1,0 +1,25 @@
+<section class="bg-light text-center py-5">
+    <div class="container">
+        <h1 class="display-5 fw-bold">{{title}}</h1>
+        <p class="lead">{{{description}}}</p>
+        <div class="mt-4 d-flex flex-column flex-sm-row justify-content-center align-items-center gap-2">
+            <a href="/" target="_blank" class="btn btn-primary">Try JSON Viewer</a>
+            <a href="/dummyapis" class="btn btn-outline-secondary">Use Dummy API</a>
+        </div>
+    </div>
+</section>
+
+<section class="container my-3">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <figure>
+                        <img src="{{featuredImage}}" class="img-fluid" alt="{{title}}">
+                    </figure>
+                    {{{pageHTML}}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

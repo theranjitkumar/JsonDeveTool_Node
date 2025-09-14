@@ -16,17 +16,17 @@ router.get('/', function (req, res, next) {
     };
     res.render('editor', {
         layout: 'editor',
-        title: 'JSON Viewer',
+        title: 'JSON Viewer | JSON Viewer online | best JSON Viewer online, | JSON Formater | JSON formatter online | best JSON Formater online',
         description: 'Use our free JSON Formatter online to view, beautify, and validate JSON instantly. Perfect for developers and testers.',
-        keywords: 'JSON, Dev Tool, Viewer, Manipulator, Formater',
+        keywords: 'JSON Viewer, JSON Formater, JSON Viewer online, best JSON Viewer online, JSON, Viewer, Formater, JSON formatter online, best JSON Formater online',
         author: 'Jsone Dev Tool',
 
         metaOgType: 'website',
-        metaOgTitle: 'Jsone Dev Tool',
+        metaOgTitle: 'JSON Viewer | JSON Viewer online | best JSON Viewer online, | JSON Formater | JSON formatter online | best JSON Formater online',
         metaOgDescription: 'Use our free JSON Formatter online to view, beautify, and validate JSON instantly. Perfect for developers and testers.',
-        metaOgImage: '/img/jsondt.png',
+        metaOgImage: '/img/json.png',
         metaOgUrl: 'https://jsondevtool.com',
-        metaTwitterCard: '/img/jsondt.png',
+        metaTwitterCard: '/img/json.png',
         json: JSON.stringify(jsonData)
     });
 });
@@ -40,7 +40,7 @@ router.get('/home', function (req, res, next) {
         author: 'Jsone Dev Tool',
 
         metaOgType: 'website',
-        metaOgTitle: 'Jsone Dev Tool',
+        metaOgTitle: 'JSON Viewer | JSON Viewer online | best JSON Viewer online, | JSON Formater | JSON formatter online | best JSON Formater online',
         metaOgDescription: 'Free online JSON formatter and viewer. Use dummy APIs for testing your frontend apps. Fast, reliable developer tools at JSON Dev Tool.',
         metaOgImage: '/img/jsondt.png',
         metaOgUrl: 'https://jsondevtool.com',

@@ -3,17 +3,32 @@ const router = express.Router();
 const fs = require('fs');
 const path = require('path');
 const blogData = require('../data/blogs');
+const { ads } = require('../data/ads');
 
 // Function to fetch slugs from the blog data
 const getSlugs = async () => {
-    // Convert blogData object to array of blog entries
-    const blogEntries = Object.values(blogData);
-    const blogSlugs = blogEntries.map(blog => ({
-        type: 'blog',
-        slug: blog.slug // Using 'slug' to match the blog data structure
-    }));
+    try {
+        // Convert blogData object to array of blog entries
+        const blogEntries = Object.values(blogData);
+        const blogSlugs = blogEntries.map(blog => ({
+            type: 'blog',
+            slug: blog.slug,
+            priority: '0.8'
+        }));
 
-    return blogSlugs;
+        // Add ads to the sitemap
+        const adSlugs = ads.map(ad => ({
+            type: '',  // Remove 'ad/' from the URL
+            slug: ad.slug,
+            priority: '0.7'
+        }));
+
+        const allSlugs = [...blogSlugs, ...adSlugs];
+        return allSlugs;
+    } catch (error) {
+        console.error('Error in getSlugs:', error);
+        return [];
+    }
 };
 
 router.get('/sitemap.xml', async (req, res) => {
@@ -24,11 +39,13 @@ router.get('/sitemap.xml', async (req, res) => {
         let sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n`;
         sitemap += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
-        slugs.forEach(({ type, slug }) => {
+        slugs.forEach(({ type, slug, priority }) => {
             sitemap += `  <url>\n`;
-            sitemap += `    <loc>${baseUrl}/${type}/${slug}</loc>\n`;
+            // Handle empty type (for ads) by not adding an extra slash
+            const urlPath = type ? `${type}/${slug}` : slug;
+            sitemap += `    <loc>${baseUrl}/${urlPath}</loc>\n`;
             sitemap += `    <changefreq>weekly</changefreq>\n`;
-            sitemap += `    <priority>0.8</priority>\n`;
+            sitemap += `    <priority>${priority || '0.5'}</priority>\n`;
             sitemap += `  </url>\n`;
         });
 

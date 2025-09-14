@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
+const createError = require('http-errors');
 const { findAdBySlug } = require('./data/ads.js');
 
 router.get('/', function (req, res, next) {

@@ -13,17 +13,17 @@ router.get('/', function (req, res, next) {
   console.log('Number of articles:', articles.length);
 
   res.render('blog', {
-    title: 'Blog - ModernTech Academy',
-    description: 'Stay updated with the latest tutorials, industry insights, and success stories from ModernTech Academy.',
+    title: 'Blog',
+    description: 'Stay updated with the latest tutorials, industry insights, and success stories from JsonDevTool.',
     featuredArticle,
     articles,
     keywords: 'blog, programming tutorials, web development, data science, cloud computing, tech news, career advice',
     metaOgType: 'website',
-    metaOgTitle: 'ModernTech Academy Blog - Tech Insights & Tutorials',
+    metaOgTitle: 'JsonDevTool Blog - Tech Insights & Tutorials',
     metaOgDescription: 'Explore our collection of articles, tutorials, and industry insights on programming, data science, cloud computing, and more.',
-    metaOgImage: 'https://moderntechacademy.com/img/favicon/logo.png',
-    metaOgUrl: 'https://moderntechacademy.com/blog',
-    metaCanonical: 'https://moderntechacademy.com/blog',
+    metaOgImage: 'https://jsondevtool.com/img/logo/logo.png',
+    metaOgUrl: 'https://jsondevtool.com/blog',
+    metaCanonical: 'https://jsondevtool.com/blog',
     // currentPage: '/blog'
   });
 });
@@ -42,15 +42,15 @@ router.get('/:slug', function (req, res, next) {
     .slice(0, 3);
 
   res.render('blog-details', {
-    title: `${article.title} | ModernTech Academy Blog`,
+    title: `${article.title}`,
     description: article.content.replace(/<[^>]*>?/gm, '').substring(0, 160) + '...',
     keywords: article.tags.join(', '),
     metaOgType: 'article',
     metaOgTitle: article.title,
     metaOgDescription: article.content.replace(/<[^>]*>?/gm, '').substring(0, 300) + '...',
     metaOgImage: article.featuredImage,
-    metaOgUrl: `https://moderntechacademy.com/blog/${article.slug}`,
-    metaCanonical: `https://moderntechacademy.com/blog/${article.slug}`,
+    metaOgUrl: `https://jsondevtool.com/blog/${article.slug}`,
+    metaCanonical: `https://jsondevtool.com/blog/${article.slug}`,
     article,
     relatedArticles
   });
